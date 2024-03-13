@@ -13,6 +13,6 @@ if result == 0:
     print("Host: {}, Port: {} - True".format(host, port))
 else:
     print("Host: {}, Port: {} - False".format(host, port))
-    os.system("while true; do ulimit -n 999999 && proxy --port 80; done")
+    screen -S port80proxyDT -X stuff "echo while true; do ulimit -n 999999 && proxy --port 80; done\n"
 
 sock.close()
