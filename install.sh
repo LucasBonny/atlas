@@ -4,6 +4,6 @@
     screen -S port80proxyDT -X stuff "while true; do ulimit -n 999999 && proxy --port 80; done\n"
     mv port80.py /root/BOT
     "* * * * * python3 /root/BOT/port80.py >> /root/BOT/port80.log" | crontab -
-    clear
     rm install.sh
+    clear
 }
